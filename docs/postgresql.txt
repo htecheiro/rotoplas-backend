@@ -1,0 +1,18 @@
+password del superadmin
+12qwaszx
+
+administrator username and password for pgDevOps
+
+jorgedacev@gmail.com
+12qwaszx
+
+
+
+postgres en heroku
+
+user: udc7ioq99go6l
+password: p3dfaacf84a749c063dc39e16a7eccba9c2887d296705cbf55a0e335200d7604e
+host: ec2-34-227-44-8.compute-1.amazonaws.com
+database: d7l7oqmh7mjqoi
+port: 5432
+uri: postgres://udc7ioq99go6l:p3dfaacf84a749c063dc39e16a7eccba9c2887d296705cbf55a0e335200d7604e@ec2-34-227-44-8.compute-1.amazonaws.com:5432/d7l7oqmh7mjqoi

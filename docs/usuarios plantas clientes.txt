@@ -1,0 +1,24 @@
+---usuarioapp__c---
+sfid			usuarioapp__c			                    contrasenaapp__c
+a0V1g0000008RDeEAM	olopez				              12345678
+a0V1g0000004ESyEAM	aaguilar			              op2017
+a0V1g0000004ET3EAM	cjuan@rotoplas.com		      cjuan201
+a0V1g0000008ROrEAM	eraguinaga@rotoplas.com		  eraguina
+
+a0V1g0000008RONEA2	jdacev				              12345678
+
+
+---planta__c---
+sfid			name
+a0S1g0000004Jk5EAE 	Bodega Aurrera Zacapu
+a0S1g0000004Jk6EAE	Bodega Aurrera Tepatitlan
+a0S1g0000004Jk7EAE	Bodega Aurrera Los Sauces
+a0S1g0000004Jk8EAE	Bodega Aurrera San Cristobal de las Casas
+
+
+---account---
+sfid			name
+0011g000003TK4qAAG	6285 Combo Cuemanco
+0011g000003TK4pAAG	1460 / 3740  Combo Cuemanco
+0011g000003TK4oAAG	5817 Combo Ampliacion Axomiatla
+0011g000003TK4nAAG	1053/ 4910  Combo Acoxpa

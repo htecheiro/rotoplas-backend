@@ -1,0 +1,8 @@
+delete from salesforcerotoplas.actividadrutina__c where id_rutinas_heroku__c = 88
+delete from salesforcerotoplas.rutinas__c where id_rutinas_heroku__c = 10
+
+select rutinas.name, rutinas.rutaimagen__c, rutinas.observacion__c,
+rutinas.idtiporutina__c, rutinas.usuarioapp__c, rutinas.idplanta__c, tiposrutina.nombre__c
+from salesforcerotoplas.rutinas__c as rutinas
+INNER JOIN salesforcerotoplas.tiporutina__c as tiposrutina
+ON (rutinas.idtiporutina__c = tiposrutina.sfid)

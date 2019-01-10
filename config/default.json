@@ -1,0 +1,24 @@
+{
+  "dbRotoplas": {
+    "dbConfig": {
+     "host": "",
+     "port": 5432,
+     "schema" : "",
+     "database": "",
+     "user": "",
+     "password": ""
+    },
+    "credit": {
+      "initialLimit": 100,
+      "initialDays": 1
+    }
+  },
+
+  "mailer":{
+      "dbConfigMailer":{
+        "key":"",
+        "domain":""
+
+      }
+}
+}

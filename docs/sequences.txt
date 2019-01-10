@@ -1,0 +1,16 @@
+secuencias creadas desde heroku para los campos custom autoincrementales
+
+table actividades rutina
+idactividadesrutina__c	nextval('salesforcerotoplas.actividadesrutina__c_id_seq'::regclass)
+
+tabla case
+id_case_heroku_c__c	nextval('salesforcerotoplas.case_heroku__c_id_seq'::regclass)
+
+tabla rutinas
+id_rutinas_heroku__c	nextval('salesforcerotoplas.rutinas_heroku__c_id_seq'::regclass)
+
+tabla asistencias
+id_asistencia__c	nextval('salesforcerotoplas.asistencia_heroku__c_id_seq'::regclass)
+
+
+max value: 9223372036854775807

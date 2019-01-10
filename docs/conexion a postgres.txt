@@ -1,0 +1,21 @@
+Desarrollo
+
+"host": "ec2-34-227-44-8.compute-1.amazonaws.com",
+"schema" : "salesforcerotoplas",
+
+"database": "d7l7oqmh7mjqoi",
+
+"user": "udc7ioq99go6l",
+
+"password": "p3dfaacf84a749c063dc39e16a7eccba9c2887d296705cbf55a0e335200d7604e"
+
+Produccion
+
+"host": "ec2-35-169-214-218.compute-1.amazonaws.com",
+"schema" : "salesforce",
+
+"database": "d50iba1a4j4n08",
+
+"user": "u3vdurhh4h70g0",
+
+"password": "pc65a7df992e796b48ac974bb558f31d6cea2ccd6a40d07261bd4845fcbcc2b86"

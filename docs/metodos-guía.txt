@@ -1,0 +1,61 @@
+﻿CASE - TICKETS
+
+GET 	/api/tickets
+GET 	/api/tickets/:id TRAE TICKET POR SFID
+GET	/api/ticketsusuario/:idPlanta/:idOperador  (TRAE TODOS LOS TICKETS POR SFID DE PLANTA Y SFID DE OPERADOR (Usuario)
+POST	/api/ticket -- CREAR TICKET
+//CAMPOS
+{
+"description": "Descripcion Jorge 11",
+"enviaagua__c": "No envía agua",
+"origin": "Interno",
+"idplanta__c": "a0S1g0000008TxQEAU",
+"operadorapp__c": "a0V1g0000008RDeEAM",
+"reason": "Calidad/Proceso",
+"descripciondefalla__c": "Tuberia PVC",
+"motivodedesestabilizacion__c": "Falla de equipos"
+}
+
+-----------
+
+LOGIN,USUARIOS Y PLANTAS
+
+GET	/api/usuarios/:id
+POST	/api/login -- LOGIN/ PLANTA ASIGNADA POR DEFAULT -- campos ->  user / pass
+GET	/api/plantas
+GET	/api/plantas/:id  (PLANTA POR SFID)
+GET	/api/configuracion/:userId (TRAE "sfid" y "name" de TODAS LAS PLANTAS ASIGNADAS AL USUARIO POR SFID USUARIO)
+
+-----------
+
+RUTINAS - ACTIVIDAD RUTINA
+
+GET  	/api/tiporutinas (obtiene todos los tipos de rutina)
+GET  	/api/rutinas
+GET  	/api/rutinas/:id'
+GET  	/api/rutinasusuario/:idPlanta/:operador (TRAE TODAS LAS RUTINAS POR SFID PLANTA Y SFID USUARIO)
+GET  	/api/preguntastiporutina/:idTipoRutina  (TRAE TODAS LAS PREGUNTAS POR SFID DE RUTINA)
+POST 	/api/actividadesrutinas
+
+CAMPOS -- BLOQUEAR CAMPO valor_si_no__c o valornumerico__c si se completa alguno de los dos para que ingrese como "null" alguno de los dos.
+{
+        "name": "Vaciar tanque/limpiar",
+        "valor_si_no__c": "true",
+        "valornumerico__c": null,
+        "id_pregunta_rutina__c": "a0U1g0000004EjPEAU",
+        "idrutina__c": "a0T1g00000004wcEAA"
+}
+
+-----------
+
+//MOTIVOS OPORTUNIDADES Y DESCRIPCIONES.
+
+GET	/api/motivosoportunidades  (TRAE TODO DE "motivooportunidad__c")
+GET	/api/descripcionmotivos/:id (TRAE TODAS LAS DESCRIPCIONES DE "descripciondefalla__c" POR SFID DE "motivooportunidad__c")
+GET	/api/motivosdesestabilizaciones/:id (TRAE TODAS LAS DESESTABILIZACIONES DE "motivodedesestabilizacion__c" POR SFID DE "descripciondefalla__c")
+
+//SINCRONIZACION SALESFORCE
+
+POST 	/api/postactividadtest
+POST	/api/posttiporutinatest
+GET	/api/loginSalesforce

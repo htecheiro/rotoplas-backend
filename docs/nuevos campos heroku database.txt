@@ -1,0 +1,29 @@
+tabla case (tickets)
+idplanta_fk_heroku	integer
+
+
+
+tabla preguntarutina
+idtiporutina_fk_heroku integer
+
+
+
+tabla rutinas__c
+idplanta_fk_heroku	integer
+idtiporutina_fk_heroku integer
+
+
+
+tabla usuarioplanta__ch (tabla creada integramente del lado de heroku)
+id integer pk
+usuarioapp__c character 18
+idplanta_fk_heroku	integer
+
+
+
+tabla actividadrutina__c
+idrutina_fk_heroku
+
+
+tabla usuarioapp__c
+codigoseguridad_heroku integer (nuevo campo)

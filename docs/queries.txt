@@ -1,0 +1,51 @@
+--select * from salesforcerotoplas.planta__c where sfid = 'a0S1g0000004Jk5EAE'
+--select * from salesforcerotoplas.account where planta_del_del__c = 'a0S1g0000004Jk5EAE'
+--delete from salesforcerotoplas.usuarioplanta__c where id = 7
+select * from salesforcerotoplas.usuarioplanta__c where usuarioapp__c = 'a0V1g0000004ESyEAM'
+
+
+select rutinas.name, rutinas.rutaimagen__c, rutinas.observacion__c, rutinas.idtiporutina__c, 
+rutinas.usuarioapp__c, rutinas.idplanta__c, tiposrutina.nombre__c, rutinas.createddate,
+planta__c_alias.formato__c, planta__c_alias.determinante__c 
+from salesforcerotoplas.rutinas__c as rutinas 
+INNER JOIN salesforcerotoplas.tiporutina__c as tiposrutina 
+ON (rutinas.idtiporutina__c = tiposrutina.sfid) 
+INNER JOIN salesforcerotoplas.planta__c planta__c_alias 
+on (rutinas.idplanta__c = planta__c_alias.sfid)
+where idplanta__c= 'a0S1g0000004Jk5EAE' and usuarioapp__c = 'a0V1g0000008RDeEAM' 
+order by rutinas.createddate desc
+
+
+SELECT actividadrutina.id_actividadesrutina__c, preguntarutina.name, actividadrutina.valor_si_no__c, 
+actividadrutina.valornumerico__c, actividadrutina.observaciones__c
+FROM salesforcerotoplas.rutinas__c
+INNER JOIN salesforcerotoplas.actividadrutina__c as actividadrutina 
+ON (rutinas__c.id_rutinas_heroku__c = actividadrutina.id_rutinas_heroku__c) 
+INNER JOIN salesforcerotoplas.preguntarutina__c as preguntarutina 
+ON (actividadrutina.id_pregunta_rutina__c = preguntarutina.sfid)
+WHERE rutinas__c.id_rutinas_heroku__c = 64
+
+
+SELECT id_case_heroku_c__c, origin, casenumber, motivodedesestabilizacion__c, "case".createddate, subject
+status, enviaagua__c, descripciondefalla__c, reason, description, clientes.name as nombrecliente
+FROM salesforcerotoplas.case
+INNER JOIN salesforcerotoplas.account as clientes 
+ON ("case".accountid = clientes.sfid) 
+WHERE "case".id_case_heroku_c__c = 133
+
+
+
+select planta__c_alias.sfid, planta__c_alias.name, planta__c_alias.formato__c, 
+planta__c_alias.determinante__c, account_alias.billinglatitude , account_alias.billinglongitude
+from salesforcerotoplas.usuarioapp__c usuarioapp__c_alias 
+
+inner join salesforcerotoplas.usuarioplanta__c usuarioplanta__c_alias 
+on usuarioapp__c_alias.sfid = usuarioplanta__c_alias.usuarioapp__c 
+
+inner join salesforcerotoplas.planta__c planta__c_alias 
+on usuarioplanta__c_alias.id_planta__c = planta__c_alias.sfid
+inner join salesforcerotoplas.account account_alias
+on account_alias.planta_del_del__c = planta__c_alias.sfid
+
+where usuarioplanta__c_alias.usuarioapp__c = 'a0V1g0000008Y5oEAE' 
+and usuarioplanta__c_alias.default__c = true

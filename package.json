@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-rotoplasoperarios",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "azure-storage": "^2.8.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "config": "^1.28.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "formidable": "^1.1.1",
+    "jade": "~1.11.0",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.19.1",
+    "morgan": "~1.9.0",
+    "multiparty": "^4.1.3",
+    "nodemailer": "^4.4.0",
+    "nodemailer-mailgun-transport": "^1.3.5",
+    "pg-promise": "^7.0.2",
+    "serve-favicon": "~2.4.5"
+  }
+}
